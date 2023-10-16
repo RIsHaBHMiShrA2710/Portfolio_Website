@@ -1,0 +1,64 @@
+.education-section {
+    background-color: var(--body_background);
+    color: var(--body_color);
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .education-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .education-item {
+    width: calc(33.333% - 20px);
+    padding: 20px;
+    margin: 0 10px 20px 0;
+    background-color: var(--card_background);
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateX(0);
+    transition: transform 0.3s;
+  }
+  
+  .education-item:hover {
+    transform: translateX(10px);
+    transition: transform 0.3s;
+  }
+  
+  
+  .education-title {
+    font-size: 24px; 
+    font-weight: bold;
+    margin: 0;
+    color: #007acc;
+  }
+  
+  .education-info {
+    font-size: 18px;
+    margin: 10px 0; 
+  }
+  
+  @media (max-width: 768px) {
+    .education-items {
+      flex-direction: column;
+    justify-content: center; /* Center items vertically on mobile screens */
+    }
+    
+    .education-item {
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
+  }
+  

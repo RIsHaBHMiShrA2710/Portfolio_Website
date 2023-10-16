@@ -1,0 +1,25 @@
+
+:root {
+    --body_background: white;
+    --body_color: black;
+    --link_color: navy;
+    --nav_color:  rgba(139, 139, 139, 0.8);
+    --card_background:  #ffffff;
+    --box_shadow: rgba(0, 0, 0, 0.15) 8px 8px 10px;
+}
+
+[data-theme="dark"] {
+    --body_background: #282c34;
+    --body_color: white;
+    --link_color: cyan;
+    --nav_color:  rgba(0, 0, 0, 0.8);
+    --card_background:  #333842;
+    --box_shadow: rgba(255, 255, 255, 0.4) -5px 5px, rgba(46, 233, 240, 0.3) -10px 10px, rgba(46, 188, 240, 0.2) -15px 15px, rgba(46, 107, 240, 0.1) -20px 20px, rgba(46, 82, 240, 0.05) -25px 25px;
+}
+* {
+    transition: all 0.3s ease-in-out;
+}
+body {
+    background-color: var(--body_background);
+    color: var(--body_color);
+}
