@@ -52,11 +52,11 @@
     }
 
     .navbar-opaque {
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: var(--nav_color);
     }
 
     .navbar-collapse {
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: var(--nav_color);
         transition: height 0.3s;
     }
 

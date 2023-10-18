@@ -5,6 +5,7 @@ import "./navbar.css";
 
 function NavbarComponent() {
     const [scrolling, setScrolling] = useState(false);
+    const [navbarCollapsed, setNavbarCollapsed] = useState(false);
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -16,15 +17,18 @@ function NavbarComponent() {
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
-            setScrolling(true);
+            if (!navbarCollapsed) {
+                setScrolling(true);
+            }
         } else {
-            setScrolling(false);
+            if (!navbarCollapsed) {
+                setScrolling(false);
+            }
         }
     };
-
     return (
         <Navbar expand="lg" className={scrolling ? 'navbar-opaque' : 'navbar-transparent'}>
-            <Navbar.Brand href="#home" className="mr-auto">Your Logo</Navbar.Brand>
+            <Navbar.Brand href="#home" className="mr-auto">Rishabh Mishra</Navbar.Brand>
             <DarkMode />   
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">

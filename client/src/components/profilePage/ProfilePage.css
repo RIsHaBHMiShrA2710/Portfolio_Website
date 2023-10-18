@@ -3,9 +3,9 @@
     justify-content: center;
     align-items: center;
     background-color: var(--body_background);
-    height: 100vh;
     padding: 5% 4%;
 }
+
 .Profile-img {
     padding: 10px;
     border-radius: 50%;
@@ -43,6 +43,15 @@
     margin: 0px 40px;
 }
 
+
+.about-heading{
+    padding: 15px;
+}
+.about-text{
+    padding: 15px;
+    line-height: 1.3rem;
+    font-size: large;
+}
 @media (max-width: 768px) {
     .Profile-Container{
         flex-direction: column-reverse;
@@ -56,5 +65,12 @@
     .Profile-Right{
         text-align: center;
     }
+    .about-heading{
+        padding: 0px;
+    }
+    .about-text{
+        padding: 0px;
+    }
+
     
 }

@@ -4,6 +4,7 @@ import ProfilePage from './components/profilePage/ProfilePage';
 import EducationSection from './components/educationSection/educationSection';
 import ProjectsSection from './components/projectsSection/projectsSection';
 import SkillsSection from './components/educationSection/skillsSection';
+import ContactForm from './components/contactSection/ContactForm';
 
 function App() {
     return (
@@ -20,7 +21,7 @@ function App() {
                 <SkillsSection />
             </section>
             <section id="contact">
-                {/* Content for the Contact section */}
+                <ContactForm />
             </section>
         </div>
     );

@@ -1,0 +1,127 @@
+/* ContactForm.css */
+
+.contact-form-container {
+    background: var(--body_background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    height: 100vh;
+    margin: -20px 0 50px;
+}
+
+.contact-form-container .container {
+    background-color: var(--card_background);
+    border-radius: 5px;
+    box-shadow: var(--box_shadow);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    min-width: 370px;
+}
+
+.contact-form-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    padding: 15px;
+}
+
+.contact-form-container .form-container {
+    display: flex;
+}
+
+
+.contact-form-container .right-container {
+    display: flex;
+    flex: 1;
+    height: 500px;
+    background-color: black;
+    justify-content: center;
+    align-items: baseline;
+    background: linear-gradient(to left, #56ccf2, #2f80ed); 
+}
+
+.contact-form-container .left-container {
+    display: flex;
+    flex: 1;
+    height: 500px;
+    justify-content: center;
+    color: var(--body_color);
+    background: var(--contact_color_left);
+}
+
+.contact-form-container .left-container p {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 600;
+}
+
+.contact-form-container .right-inner-container {
+    width: 70%;
+    height: 80%;
+    text-align: center;
+}
+
+.contact-form-container .left-inner-container {
+    height: 50%;
+    width: 80%;
+    text-align: center;
+    line-height: 22px;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+    background-color: var(--card_background);
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    font-size: 0.8rem;
+    color: var(--body_color);
+}
+
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+    outline: 1px solid var(--link_color);
+}
+
+.contact-form-container button {
+    border-radius: 20px;
+    border: 1px solid var(--link_color);
+    background-color: var(--link_color);
+    color: var(--body_color);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+}
+
+.contact-form-container button:hover {
+    opacity: 0.7;
+}
+
+@media only screen and (max-width: 600px) {
+    .contact-form-container .left-container {
+        display: none;
+    }
+    .contact-form-container .lg-view {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .contact-form-container .sm-view {
+        display: none;
+    }
+}
+
+.contact-form-container form p {
+    text-align: left;
+}
