@@ -5,6 +5,7 @@ import EducationSection from './components/educationSection/educationSection';
 import ProjectsSection from './components/projectsSection/projectsSection';
 import SkillsSection from './components/educationSection/skillsSection';
 import ContactForm from './components/contactSection/ContactForm';
+import Footer from './components/footer/Footer';
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
             <section id="contact">
                 <ContactForm />
             </section>
+            <Footer />
         </div>
     );
 }

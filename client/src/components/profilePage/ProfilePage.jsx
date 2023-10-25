@@ -1,22 +1,39 @@
 import React from 'react';
 import { FaTwitter, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
+import DownloadButton from '../DownloadButton/DownloadButton';
 import "./ProfilePage.css";
 
 function ProfilePage() {
+
+
   return (
     <div className="Profile-Container">
       <div className="Profile-Right">
-        <h1 className='about-heading'>About me</h1>
+        <h4 className="about-heading">Hello World,</h4>
+        <h1 className="about-heading">
+          I am <span className="highlighted">Rishabh Mishra</span>
+        </h1>
+        <h1 className="about-heading">
+          A <span className='highlighted'>Full Stack</span> Developer
+        </h1>
         <p className='about-text'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis turpis nisi, vel pulvinar augue commodo et. Pellentesque vitae suscipit lorem, sit amet pulvinar odio. Aenean ultrices cursus nisi eget interdum. Suspendisse potenti. Donec venenatis porta diam, id suscipit mauris condimentum eu. Sed erat odio, aliquam id nisi ut, mattis dignissim leo. Cras risus dui, suscipit ac ullamcorper vel, facilisis id felis. Etiam tincidunt sodales quam id mollis. Mauris consequat elementum eros pulvinar aliquet. Nullam venenatis luctus nulla, congue tincidunt elit dictum vel. Fusce facilisis sit amet metus eget eleifend. Cras mattis felis ut ma
+          {/* Add your about text here */}
         </p>
         <div className="social-icons">
-          <a href="https://twitter.com/your-twitter-link"><FaTwitter /></a>
-          <a href="https://www.instagram.com/your-instagram-link"><FaInstagram /></a>
-          <a href="https://github.com/your-github-link"><FaGithub /></a>
-          <a href="https://www.linkedin.com/in/your-linkedin-link"><FaLinkedin /></a>
+          <a href="https://twitter.com/your-twitter-link" target="_blank" rel="noreferrer">
+            <FaTwitter />
+          </a>
+          <a href="https://www.instagram.com/your-instagram-link" target="_blank" rel="noreferrer">
+            <FaInstagram />
+          </a>
+          <a href="https://github.com/your-github-link" target="_blank" rel="noreferrer">
+            <FaGithub />
+          </a>
+          <a href="https://www.linkedin.com/in/your-linkedin-link" target="_blank" rel="noreferrer">
+            <FaLinkedin />
+          </a>
+          <DownloadButton />
         </div>
-        <button onClick={downloadResume}>Download Resume</button>
       </div>
       <div className="Profile-Left">
         <div className="Profile-Image">
@@ -25,10 +42,6 @@ function ProfilePage() {
       </div>
     </div>
   );
-}
-
-function downloadResume() {
-  // You can add the logic to download the resume here
 }
 
 export default ProfilePage;

@@ -19,7 +19,7 @@
 .project-card {
   background: var(--contact_color_left);
   color: var(--body_color);
-  width: 90%;
+  width: calc(100% - 60px);
   display: flex;
   flex-direction: column;
   margin: 20px;
