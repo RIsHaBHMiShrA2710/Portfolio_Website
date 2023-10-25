@@ -198,6 +198,9 @@
     left: 30px;
     margin-left: 0;
   }
+  .education-section{
+    padding: 0px;
+  }
   .education-item,
   .education-item:nth-child(even) {
     justify-content: flex-end;

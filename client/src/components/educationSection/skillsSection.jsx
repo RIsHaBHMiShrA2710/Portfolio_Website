@@ -135,87 +135,97 @@ const SkillsSection = () => {
         <>
 
             <h2 className="section-title">Skills</h2>
-            <section className="skills-section">
+            <div className='about-skill'>
+                
+                <section className='aboutme'>
+                    <h3 className='aboutme-heading'>About me</h3>
+                    <p className='aboutme-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                </section>
+                <div className='skill-part'>
 
+                
+                <section className="skills-section">
+                    <div className="skills-container">
 
-                <div className="skills-container">
-
-                    <div className="skills-box">
-                        <div className="skills-content">
-                            <h3 className='skill-name'>Languages</h3>
-                            <div className="skill">
-                                {languages.map((skill, index) => (
-                                    <div className="skill-icon" key={index}>
-                                        {skillIcons[skill.skillName]}
-                                    </div>
-                                ))}
+                        <div className="skills-box">
+                            <div className="skills-content">
+                                <h3 className='skill-name'>Languages</h3>
+                                <div className="skill">
+                                    {languages.map((skill, index) => (
+                                        <div className="skill-icon" key={index}>
+                                            {skillIcons[skill.skillName]}
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div className="skills-container">
+
+                        <div className="skills-box">
+                            <div className="skills-content">
+                                <h3 className='skill-name'>FrontEnd</h3>
+                                <div className="skill">
+                                    {frontendSkills.map((skill, index) => (
+                                        <div className="skill-icon" key={index}>
+                                            {skillIcons[skill.skillName]}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className="skill-center">
+                        <div class="skill-center-box">
+                            <h2>SKILLS</h2>
                         </div>
                     </div>
 
-                </div>
+                    <div className="skills-container">
 
 
-
-                <div className="skills-container">
-
-                    <div className="skills-box">
-                        <div className="skills-content">
-                            <h3 className='skill-name'>FrontEnd</h3>
-                            <div className="skill">
-                                {frontendSkills.map((skill, index) => (
-                                    <div className="skill-icon" key={index}>
-                                        {skillIcons[skill.skillName]}
-                                    </div>
-                                ))}
+                        <div className="skills-box">
+                            <div className="skills-content">
+                                <h3 className='skill-name'>BackEnd and Databases</h3>
+                                <div className="skill">
+                                    {backendSkills.map((skill, index) => (
+                                        <div className="skill-icon" key={index}>
+                                            {skillIcons[skill.skillName]}
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
+
                     </div>
 
-                </div>
-
-                <div className="skill-center">
-                    <div class="skill-center-box">
-                        <h2>SKILLS</h2>
-                    </div>
-                </div>
-
-                <div className="skills-container">
+                    <div className="skills-container">
 
 
-                    <div className="skills-box">
-                        <div className="skills-content">
-                            <h3 className='skill-name'>BackEnd and Databases</h3>
-                            <div className="skill">
-                                {backendSkills.map((skill, index) => (
-                                    <div className="skill-icon" key={index}>
-                                        {skillIcons[skill.skillName]}
-                                    </div>
-                                ))}
+                        <div className="skills-box">
+                            <div className="skills-content">
+                                <h3 className='skill-name'>Miscelanous</h3>
+                                <div className="skill">
+                                    {miscskills.map((skill, index) => (
+                                        <div className="skill-icon" key={index}>
+                                            {skillIcons[skill.skillName]}
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
+
                     </div>
-
+                </section>
                 </div>
+            </div>
 
-                <div className="skills-container">
-
-
-                    <div className="skills-box">
-                        <div className="skills-content">
-                            <h3 className='skill-name'>Miscelanous</h3>
-                            <div className="skill">
-                                {miscskills.map((skill, index) => (
-                                    <div className="skill-icon" key={index}>
-                                        {skillIcons[skill.skillName]}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
         </>
     );
 };
