@@ -9,6 +9,11 @@
     --box_shadow: rgba(0, 0, 0, 0.15) 8px 8px 10px;
     --contact_color_left: linear-gradient(43deg, #ffcbc7 0%, #ffeed0 46%, #fffacb 100%);
     --highlighted_text: orange;
+    --background_image: url(https://img.freepik.com/free-vector/pastel-gradient-low-poly-background_1048-8005.jpg?w=900&t=st=1698318460~exp=1698319060~hmac=22ab7903393e0c8fba1d66534887d58a7a534d176f0dd5d3d66bb5ad714299b1);
+    --icon_color: rgb(223, 92, 69);
+    --button_color: rgb(255, 193, 79);
+    --icon_hover_color: rgb(183, 77, 59);
+    --button_hover_color: rgb(215, 165, 70);
 }
 
 [data-theme="dark"] {
@@ -20,7 +25,12 @@
     --box_shadow: rgba(255, 255, 255, 0.4) -5px 5px, rgba(46, 233, 240, 0.3) -10px 10px, rgba(46, 188, 240, 0.2) -15px 15px, rgba(46, 107, 240, 0.1) -20px 20px, rgba(46, 82, 240, 0.05) -25px 25px;
     --contact_color_left: linear-gradient(to right, #2C5364, #203A43, #0F2027);
     --highlighted_text: yellow;
-}
+    --background_image: url(https://i.pinimg.com/736x/63/bd/40/63bd40ba4e2c3ceb8ecb92abeea19e24.jpg);
+    --icon_color: rgb(234, 0, 255);
+    --button_color: rgb(5, 170, 225);
+    --icon_hover_color: rgb(183, 0, 255);
+    --button_hover_color: rgb(5, 141, 225);
+}   
 * {
     transition: all 0.3s ease-in-out;
 }

@@ -71,19 +71,6 @@
     color: var(--highlighted_text);
     font-weight: 900;
 }
-button {
-    background-color: #007bff; /* Blue color, you can change this to your desired color */
-    color: white; /* Text color */
-    padding: 10px 20px; /* Adjust the padding to change the button size */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #0056b3; /* Change the background color on hover */
-  }
 @media (max-width: 768px) {
     .Profile-Container{
         flex-direction: column-reverse;

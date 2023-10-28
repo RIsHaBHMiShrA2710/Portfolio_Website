@@ -1,0 +1,99 @@
+
+.platform-carousel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  
+}
+
+.platform-slider {
+  display: flex;
+  justify-content: center;
+  width: calc(800px + 60px);
+  padding-top: 20px;
+  height: 295px;
+  border-radius: 20px;
+  margin: 30px 0px;
+  background: var(--contact_color_left);
+}
+
+.slick-list,
+.slick-track {
+  width: 800px;
+  height: 400px; 
+}
+.slick-arrow:before{
+    color: var(--body_color);
+}
+.platform-slider .platform-box {
+  margin: 15px;
+  width: 200px; 
+  height: 200px; 
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  background: rgb(2, 2, 2);
+  object-fit: contain;
+}
+
+.platform-image {
+  width: 100%;
+  height: 100%; 
+  object-fit: contain;
+}
+
+.platform-info {
+  margin-top: 10px;
+}
+
+.slick-center .platform-box {
+  border: 2px solid #007ACC;
+  transform: scale(1.2);
+  z-index: 1; 
+}
+.slick-slide{
+  width: 350px;
+}
+@media only screen and (max-width: 600px) {
+  .platform-slider {
+    width: calc(100% - 40px);
+  }
+  .slick-list {
+    width: 380px;
+    margin: 0 20px; /* Add margin to both sides to maintain the 40px gap */
+  }
+  .slick-slide {
+    width: 300px;
+  }
+  .platform-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .platform-slider{
+   
+  }
+  .slick-list{
+    width: 250px;
+    
+  }
+  .platform-image {
+    width: 200px;
+    object-fit: cover;
+  }
+  .slick-slide {
+    display: none;
+    width: 280px;
+  }
+  
+}

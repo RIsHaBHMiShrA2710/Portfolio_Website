@@ -9,6 +9,7 @@
     text-decoration: none;
     color: white;
     margin: 10px;
+    font-size: 2rem;
 }
 .download-resume{
     display: flex;

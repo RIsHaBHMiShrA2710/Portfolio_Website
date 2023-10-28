@@ -41,7 +41,8 @@
     background-color: black;
     justify-content: center;
     align-items: baseline;
-    background: linear-gradient(to left, #56ccf2, #2f80ed); 
+    background: var(--background_image); 
+    background-size: cover;
 }
 
 .contact-form-container .left-container {
@@ -106,12 +107,17 @@
     opacity: 0.7;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
     .contact-form-container .left-container {
         display: none;
     }
-    .contact-form-container .lg-view {
-        display: none;
+    .contact-form-container .form-container{
+        width: 100%;
+    }
+    .contact-form-container .right-container {
+        display: flex;
+        width: calc(100%-10px);
+        margin:20px 0px;
     }
 }
 
@@ -120,7 +126,11 @@
         display: none;
     }
 }
-
+@media only screen and (max-width: 600px) {
+    .contact-form-container .lg-view {
+        display: none;
+    }
+}
 .contact-form-container form p {
     text-align: left;
 }

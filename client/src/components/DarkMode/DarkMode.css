@@ -1,68 +1,84 @@
+/* Dark Mode Switch Styles */
 .dark_mode {
-    margin-top: -20px;
-    margin-left: 10px;
-}
-
-.dark_mode_label {
-    width: 65px;
-    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dark_mode_input.input {
+    display: none; /* Hide the default input */
+  }
+  
+  .dark_mode_label {
     position: relative;
-    display: block;
-    background: #ebebeb;
-    border-radius: 200px;
-    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
-        inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    display: inline-block;
+    width: 64px;
+    height: 34px;
     cursor: pointer;
-    transition: 0.3s;
-}
-.dark_mode_label:after {
+  }
+  
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #73C0FC; /* Default background color for the switch */
+    transition: background-color 0.4s; /* Smooth transition for background color */
+    border-radius: 30px;
+  }
+  
+  .slider:before {
     content: "";
-    width: 25px;
-    height: 25px;
     position: absolute;
-    top: 3px;
-    left: 3px;
-    background: linear-gradient(180deg, #ffcc89, #d8860b);
-    border-radius: 180px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-}
-.dark_mode_input {
-    width: 0;
-    height: 0;
-    visibility: hidden;
-}
-.dark_mode_input:checked + .dark_mode_label {
-    background: #242424;
-}
-.dark_mode_input:checked + .dark_mode_label:after {
-    left: 62px;
-    transform: translateX(-100%);
-    background: linear-gradient(180deg, #777, #3a3a3a);
-}
-.dark_mode_label:active:after {
+    height: 30px;
     width: 30px;
-}
-
-.dark_mode_label svg {
+    border-radius: 20px;
+    left: 2px;
+    bottom: 2px;
+    z-index: 2;
+    background-color: #e8e8e8; /* Default knob color */
+    transition: transform 0.4s; /* Smooth transition for the knob position */
+  }
+  
+  .sun svg,
+  .moon svg {
     position: absolute;
-    width: 20px;
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+  }
+  
+  .sun svg {
+    top: 6px;
+    left: 36px;
+    animation: rotate 15s linear infinite;
+  }
+  
+  .moon svg {
     top: 5px;
-    z-index: 100;
-}
-.dark_mode_label svg.sun {
     left: 5px;
-    fill: #fff;
-    transition: 0.3s;
-}
-.dark_mode_label svg.moon {
-    left: 40px;
-    fill: #7e7e7e;
-    transition: 0.3s;
-}
-.dark_mode_input:checked + .dark_mode_label svg.sun {
-    fill: #7e7e7e;
-}
-.dark_mode_input:checked + .dark_mode_label svg.moon {
-    fill: #fff;
-}
+    fill: #73C0FC; /* Color for the moon icon */
+    animation: tilt 5s linear infinite;
+  }
+  
+
+  .dark_mode:hover .sun svg {
+    animation: rotate 15s linear infinite;
+  }
+  
+  .dark_mode:hover .moon svg {
+    animation: tilt 5s linear infinite;
+  } 
+  .dark_mode_input.input:checked + .slider {
+    background-color: #183153; /* Change the background color when checked */
+  }
+  
+  .dark_mode_input.input:focus + .slider {
+    box-shadow: 0 0 1px #183153;
+  }
+  
+  .dark_mode_input.input:checked + .slider:before {
+    transform: translateX(30px); /* Move the knob to the right when checked */
+  }
+  

@@ -6,21 +6,24 @@ import ProjectsSection from './components/projectsSection/projectsSection';
 import SkillsSection from './components/educationSection/skillsSection';
 import ContactForm from './components/contactSection/ContactForm';
 import Footer from './components/footer/Footer';
-
+import PlatformCarousel from './components/contactSection/PlatformCarousel';
 function App() {
+   
     return (
         <div>
             <NavbarComponent />
             <section id="home">
                 <ProfilePage />
             </section>
+            <section id="about">
+                <SkillsSection />
+                <EducationSection />
+            </section>
             <section id="projects">
                 <ProjectsSection />
+                <PlatformCarousel />
             </section>
-            <section id="about">
-                <EducationSection/>
-                <SkillsSection />
-            </section>
+            
             <section id="contact">
                 <ContactForm />
             </section>

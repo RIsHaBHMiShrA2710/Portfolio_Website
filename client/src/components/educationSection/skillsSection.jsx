@@ -133,8 +133,6 @@ const skillIcons = {
 const SkillsSection = () => {
     return (
         <>
-
-            <h2 className="section-title">Skills</h2>
             <div className='about-skill'>
                 
                 <section className='aboutme'>
@@ -143,7 +141,7 @@ const SkillsSection = () => {
                 </section>
                 <div className='skill-part'>
 
-                
+                <h2 className="skill-title">Skills</h2>
                 <section className="skills-section">
                     <div className="skills-container">
 
