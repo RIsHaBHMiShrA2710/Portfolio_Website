@@ -137,7 +137,7 @@ const SkillsSection = () => {
                 
                 <section className='aboutme'>
                     <h3 className='aboutme-heading'>About me</h3>
-                    <p className='aboutme-text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                    <p className='aboutme-text'>I'm an easy-going, patient, and hardworking individual with a strong passion for technology. I approach challenges with enthusiasm and a strong work ethic, always eager to learn and explore new tech developments. Currently in my 5th semester, I've spent the past year refining my skills in the MERN stack and now seek opportunities to apply them practically. I also enjoy engaging in debates on politics, social issues, and sports (though I don't often find time to play anything).</p>
                 </section>
                 <div className='skill-part'>
 
@@ -166,7 +166,7 @@ const SkillsSection = () => {
 
                         <div className="skills-box">
                             <div className="skills-content">
-                                <h3 className='skill-name'>FrontEnd</h3>
+                                <h3 className='skill-name-right'>FrontEnd</h3>
                                 <div className="skill">
                                     {frontendSkills.map((skill, index) => (
                                         <div className="skill-icon" key={index}>
@@ -190,7 +190,7 @@ const SkillsSection = () => {
 
                         <div className="skills-box">
                             <div className="skills-content">
-                                <h3 className='skill-name'>BackEnd and Databases</h3>
+                                <h3 className='skill-name'>BackEnd</h3>
                                 <div className="skill">
                                     {backendSkills.map((skill, index) => (
                                         <div className="skill-icon" key={index}>
@@ -208,7 +208,7 @@ const SkillsSection = () => {
 
                         <div className="skills-box">
                             <div className="skills-content">
-                                <h3 className='skill-name'>Miscelanous</h3>
+                                <h3 className='skill-name-right'>Miscelanous</h3>
                                 <div className="skill">
                                     {miscskills.map((skill, index) => (
                                         <div className="skill-icon" key={index}>

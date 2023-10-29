@@ -4,7 +4,7 @@ import { FaGraduationCap, FaSchool, FaUniversity } from 'react-icons/fa';
 const EducationSection = () => {
   return (
     <div className="education-section">
-      <h2 className="section-title">My Educational Journey</h2>
+      <h2 className="section-title skill-title">Education</h2>
       <div className="education-items">
         <div className="education-item">
           <div className="education-item-child">
@@ -12,7 +12,7 @@ const EducationSection = () => {
             <h3 className="education-title">10th Standard</h3>
             <p className="education-info">ARNC Vidhyalaya, 2018</p>
             <p className="education-info">WBBSE</p>
-            <p className="education-info">Percentage: 74%</p>
+            <p className="education-info">Grade: 74%</p>
           </div>
         </div>
         <div className="education-item">
@@ -21,7 +21,7 @@ const EducationSection = () => {
             <h3 className="education-title">12th Standard</h3>
             <p className="education-info">Adarsh Madhyamik Vidhyalaya, 2020</p>
             <p className="education-info">WBCHSE</p>
-            <p className="education-info">Percentage: 87% (PCM)</p>
+            <p className="education-info">Grade: 87% (PCM)</p>
           </div>
 
         </div>

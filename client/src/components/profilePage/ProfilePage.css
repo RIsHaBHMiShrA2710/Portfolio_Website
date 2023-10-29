@@ -2,8 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--body_background);
-    padding: 10% 4%;
+    background-image: var(--body_gradient);
+    padding: 11% 4%;
+    height: 100vh;
 }
 .Profile-img {
     padding: 10px;
@@ -46,11 +47,15 @@
     color: var(--body_color);
     line-height: 1.4rem;
     margin: 0px 40px;
+    max-width: 500px;
 }
 
 
 .about-heading{
     padding: 5px;
+    line-height: 2.5rem;
+    letter-spacing: 1.5px;
+
 }
 .about-text{
     padding: 5px;
@@ -60,17 +65,39 @@
 .social-icons{
     display: flex;
     flex-wrap: nowrap;
+    align-items: center;
     width: 100%;
     justify-content: space-around;
+    transition: all 0s;
 }
 .social-icons a{
+
     font-size: 3rem;
-    color:var(--body_color)
+    color:var(--body_color);
+    transition: color 0s;
 }
+.social-icon-1:hover {
+    color: #50f6f9;
+  }
+
+  .social-icon-2:hover {
+    color: #ee008b;
+  }
+
+  .social-icon-3:hover {
+    color: #25f497;
+  }
+ 
+  .social-icon-4:hover {
+    color: #0f6fe4; 
+    transition: color 0s; 
+  }
 .highlighted{
     color: var(--highlighted_text);
     font-weight: 900;
+    
 }
+
 @media (max-width: 768px) {
     .Profile-Container{
         flex-direction: column-reverse;
@@ -95,6 +122,14 @@
     }
     .social-icons{
         flex-wrap: wrap;
+    }
+    .social-icons a{
+        margin: 5px 0px;
+    }
+    .about-heading{
+        padding: 2px;
+        line-height: 2rem;
+        letter-spacing: unset;
     }
 }
 

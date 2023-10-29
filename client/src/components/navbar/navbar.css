@@ -68,5 +68,6 @@
     .navbar-toggler {
         border: none;
         color: var(--body_color);
+        background-color: white;
     }
 }

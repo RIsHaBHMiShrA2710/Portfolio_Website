@@ -1,27 +1,27 @@
-import { FaLink, FaGithub } from 'react-icons/fa'; 
+import { FaLink, FaGithub } from 'react-icons/fa';
 import "./projectsSection.css";
 
 const projects = [
   {
-    title: "Project 1",
-    description: "Description of Project 1.",
-    image: "https://i.imgur.com/RIy1Lv9.jpeg",
-    link: "https://example.com/project1",
-    github: "https://github.com/project1",
+    title: "Story Social",
+    description: "A platform to upload short stories and see them in a ranking system with upvotes and downvotes.",
+    image: "https://i.imgur.com/aZh5QtJ.png",
+    link: "https://story-generator-ai.netlify.app/",
+    github: "https://github.com/RIsHaBHMiShrA2710/Storyteller",
   },
   {
-    title: "Project 2",
-    description: "Description of Project 2.",
-    image: "https://i.imgur.com/RIy1Lv9.jpeg",
-    link: "https://example.com/project2",
-    github: "https://github.com/project2",
+    title: "Super Welded Mesh",
+    description: "The site for a welded mesh manufacturing company.",
+    image: "https://i.imgur.com/33X656O.png",
+    link: "https://suparweldedmesh.netlify.com/",
+    github: "https://github.com/dK2856/superweld_V1",
   },
   {
-    title: "Project 3",
-    description: "Description of Project 3.",
-    image: "https://i.imgur.com/RIy1Lv9.jpeg",
-    link: "https://example.com/project3",
-    github: "https://github.com/project3",
+    title: "Samvidhan AI",
+    description: "Clear all your doubts about law and constitution.",
+    image: "https://i.imgur.com/2kZOL4P.png",
+    link: "https://samvidhanai.netlify.app/",
+    github: "https://github.com/suryapratap-01/iemhacks_Hacker-Noobs",
   },
 
 ];
@@ -29,7 +29,7 @@ const projects = [
 const ProjectsSection = () => {
   return (
     <div className="project-card-container">
-      <h2 className='heading'>Projects</h2>
+      <h2 className='skill-title heading'>Projects</h2>
       {projects.map((project, index) => (
         <div className="project-card" key={index}>
           <div className="project-card-top-section">
@@ -41,14 +41,15 @@ const ProjectsSection = () => {
               <p>{project.description}</p>
             </div>
             <div class="project-card-buttons">
-            <button href={project.github} target="_blank" rel="noopener noreferrer" class="custom-button learn-more">
+              <a href={project.link} target="_blank" rel="noopener noreferrer" class="custom-button learn-more">
                 <span class="project-card-icon"><FaLink></FaLink></span>
                 <span class="button-text">Preview</span>
-              </button>
-              <button href={project.github} target="_blank" rel="noopener noreferrer" class="custom-button learn-more">
+              </a>
+              <a href={project.github} target="_blank" rel="noopener noreferrer" class="custom-button learn-more">
                 <span class="project-card-icon"><FaGithub></FaGithub></span>
                 <span class="button-text">Code</span>
-              </button>
+              </a>
+
             </div>
           </div>
         </div>

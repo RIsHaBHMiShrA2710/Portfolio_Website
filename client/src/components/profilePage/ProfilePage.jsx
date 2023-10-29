@@ -13,26 +13,27 @@ function ProfilePage() {
         <h1 className="about-heading">
           I am <span className="highlighted">Rishabh Mishra</span>
         </h1>
-        <h1 className="about-heading">
-          A <span className='highlighted'>Full Stack</span> Developer
-        </h1>
+        <h3 className="about-heading">
+          A <span className='highlighted'> Full Stack </span> Web Developer specialized in <span className='highlighted'> MERN </span> stack.
+        </h3>
         <p className='about-text'>
           {/* Add your about text here */}
         </p>
         <div className="social-icons">
-          <a href="https://twitter.com/your-twitter-link" target="_blank" rel="noreferrer">
+          <a className="social-icon-1" href="https://twitter.com/your-twitter-link" target="_blank" rel="noreferrer">
             <FaTwitter />
           </a>
-          <a href="https://www.instagram.com/your-instagram-link" target="_blank" rel="noreferrer">
+          <a className="social-icon-2" href="https://www.instagram.com/your-instagram-link" target="_blank" rel="noreferrer">
             <FaInstagram />
           </a>
-          <a href="https://github.com/your-github-link" target="_blank" rel="noreferrer">
+          <a className="social-icon-3" href="https://github.com/RIsHaBHMiShrA2710" target="_blank" rel="noreferrer">
             <FaGithub />
           </a>
-          <a href="https://www.linkedin.com/in/your-linkedin-link" target="_blank" rel="noreferrer">
+          <a className="social-icon-4" href="https://www.linkedin.com/feed/?trk=404_page" target="_blank" rel="noreferrer">
             <FaLinkedin />
           </a>
-          <DownloadButton />
+          <div className='profile-page-download-button'><DownloadButton /></div>
+          
         </div>
       </div>
       <div className="Profile-Left">

@@ -2,6 +2,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 :root {
     --body_background: white;
+    --body_gradient: linear-gradient(62deg, #ffe5e5 0%, #fbffe8 100%);
     --body_color: black;
     --link_color: cyan;
     --nav_color:  #ffebd9;
@@ -14,10 +15,12 @@
     --button_color: rgb(255, 193, 79);
     --icon_hover_color: rgb(183, 77, 59);
     --button_hover_color: rgb(215, 165, 70);
+    --border_color: rgb(255, 0, 0);
 }
 
 [data-theme="dark"] {
     --body_background: #282c34;
+    --body_gradient: radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,43,115,1) 0%, rgba(4,0,4,1) 90% );
     --body_color: white;
     --link_color: navy;
     --nav_color:  rgba(0, 0, 0, 0.8);
@@ -30,6 +33,7 @@
     --button_color: rgb(5, 170, 225);
     --icon_hover_color: rgb(183, 0, 255);
     --button_hover_color: rgb(5, 141, 225);
+    --border_color: rgb(0, 255, 255);
 }   
 * {
     transition: all 0.3s ease-in-out;
@@ -38,5 +42,4 @@ body {
     background-color: var(--body_background);
     color: var(--body_color);
     font-family: 'Poppins', sans-serif;
-
 }

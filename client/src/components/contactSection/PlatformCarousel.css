@@ -11,7 +11,9 @@
   margin-bottom: 30px;
   
 }
-
+.platform-carousel a {
+  text-decoration: none;
+}
 .platform-slider {
   display: flex;
   justify-content: center;
@@ -39,7 +41,7 @@
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 10px;
-  background: rgb(2, 2, 2);
+  background: rgb(255, 255, 255);
   object-fit: contain;
 }
 
@@ -51,23 +53,27 @@
 
 .platform-info {
   margin-top: 10px;
+  color: var(--body_color);
+  text-decoration: none;
+  
 }
 
 .slick-center .platform-box {
-  border: 2px solid #007ACC;
+  border: 2px solid var(--border_color);
   transform: scale(1.2);
   z-index: 1; 
 }
 .slick-slide{
   width: 350px;
 }
+
 @media only screen and (max-width: 600px) {
   .platform-slider {
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
   }
   .slick-list {
     width: 380px;
-    margin: 0 20px; /* Add margin to both sides to maintain the 40px gap */
+    margin: 0 20px;
   }
   .slick-slide {
     width: 300px;
@@ -88,12 +94,16 @@
     
   }
   .platform-image {
-    width: 200px;
+    width: 210px;
     object-fit: cover;
   }
   .slick-slide {
     display: none;
-    width: 280px;
+    width: fit-content;
   }
-  
+  .platform-info{
+    text-align: left;
+    padding: unset;
+    padding-left: 20px;
+  }
 }

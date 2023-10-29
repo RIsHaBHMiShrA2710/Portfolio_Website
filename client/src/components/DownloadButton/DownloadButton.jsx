@@ -54,6 +54,7 @@ const DownloadButton = () => {
               [8, 19],
               [21, 6],
             ]);
+            window.location.href = "https://drive.google.com/uc?export=download&id=1f9EHA3RjQg3Fd7srJQNaOmNM2CNuQoRN";
           }, duration / 2);
         }
       });
@@ -101,9 +102,9 @@ const DownloadButton = () => {
   });
   return (
     <div className="download-container">
-      <a href="" className="download-button">
+      <a href="https://drive.google.com/uc?export=download&id=1f9EHA3RjQg3Fd7srJQNaOmNM2CNuQoRN" className="download-button" download>
         <ul>
-          <li>&#68;ownload</li>
+          <li>&#68;ownload cv</li>
           <li>&#68;ownloading</li>
           <li>Open File</li>
         </ul>
