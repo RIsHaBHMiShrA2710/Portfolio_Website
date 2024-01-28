@@ -25,7 +25,15 @@
     background-size: 300% 300%; /* Increased size for a slower transition */
     animation: borderAnimation 10s linear infinite; /* Extended duration for smoother transition */
 }
-
+.dark-mode-glasses{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    padding-top: 70px;
+    margin-top: 10px;
+    z-index: 1;
+    display: var(--dark_mode_glasses);
+}
 @keyframes borderAnimation {
     0% {
         background-position: 0% 0%;
@@ -73,22 +81,21 @@
 .social-icons a{
 
     font-size: 3rem;
-    color:var(--body_color);
     transition: color 0s;
 }
-.social-icon-1:hover {
-    color: #50f6f9;
+.social-icon-1{
+    color: #50c1f9;
   }
 
-  .social-icon-2:hover {
+  .social-icon-2{
     color: #ee008b;
   }
 
-  .social-icon-3:hover {
-    color: #25f497;
+  .social-icon-3{
+    color: #13ef8c;
   }
  
-  .social-icon-4:hover {
+  .social-icon-4{
     color: #0f6fe4; 
     transition: color 0s; 
   }
@@ -130,6 +137,14 @@
         padding: 2px;
         line-height: 2rem;
         letter-spacing: unset;
+    }
+    .dark-mode-glasses{
+        padding: unset;
+        padding-top: 40px;
+        margin: unset;
+        margin-top: 20px;
+        width: 100px;
+        height: 100px;
     }
 }
 

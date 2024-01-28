@@ -2,13 +2,33 @@ import React from 'react';
 import { FaTwitter, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import DownloadButton from '../DownloadButton/DownloadButton';
 import "./ProfilePage.css";
+import { motion, useAnimation } from 'framer-motion';
 
 function ProfilePage() {
 
+  const containerAnimation = useAnimation();
+  const textAnimation = useAnimation();
+  const imageAnimation = useAnimation();
+  const socialIconsAnimation = useAnimation();
+  const downloadButtonAnimation = useAnimation();
+  const glassAnimation = useAnimation();
+  
+  const animatePage = async () => {
+    await containerAnimation.start({ opacity: 1 });
+    await textAnimation.start({ x: 0, opacity: 1 });
+    await imageAnimation.start({ rotate: 0, x: 0, opacity: 1 });
+    await socialIconsAnimation.start({ opacity: 1, scale: 1 });
+    await downloadButtonAnimation.start({ y: 0, opacity: 1 });
+    await glassAnimation.start({x: 0, opacity: 1});
+  };
+
+  React.useEffect(() => {
+    animatePage();
+  }, []); // Run the animation when the component mounts
 
   return (
-    <div className="Profile-Container">
-      <div className="Profile-Right">
+    <motion.div className="Profile-Container" initial={{ opacity: 0 }} animate={containerAnimation}>
+      <motion.div className="Profile-Right" initial={{ x: -50, opacity: 0 }} animate={textAnimation}>
         <h4 className="about-heading">Hello World,</h4>
         <h1 className="about-heading">
           I am <span className="highlighted">Rishabh Mishra</span>
@@ -19,7 +39,7 @@ function ProfilePage() {
         <p className='about-text'>
           {/* Add your about text here */}
         </p>
-        <div className="social-icons">
+        <motion.div className="social-icons" initial={{ opacity: 0, scale: 0 }} animate={socialIconsAnimation}>
           <a className="social-icon-1" href="https://twitter.com/your-twitter-link" target="_blank" rel="noreferrer">
             <FaTwitter />
           </a>
@@ -32,16 +52,19 @@ function ProfilePage() {
           <a className="social-icon-4" href="https://www.linkedin.com/feed/?trk=404_page" target="_blank" rel="noreferrer">
             <FaLinkedin />
           </a>
-          <div className='profile-page-download-button'><DownloadButton /></div>
-          
-        </div>
-      </div>
-      <div className="Profile-Left">
+          <motion.div className='profile-page-download-button' initial={{ y: 40, opacity: 0 }} animate={downloadButtonAnimation}>
+            <DownloadButton />
+          </motion.div>
+        </motion.div>
+      </motion.div>
+      <motion.div className="Profile-Left" initial={{ rotate: 90, x: 50, opacity: 0 }} animate={imageAnimation}>
         <div className="Profile-Image">
-          <img src="https://i.imgur.com/0tepHqb.png" className="Profile-img" alt="" />
+          <motion.img src="https://i.imgur.com/0tepHqb.png" className="Profile-img" alt="" />
+          <motion.img src="https://i.imgur.com/fkcMJZK.png" className="dark-mode-glasses" initial={{x: 60, opacity: 0 }} animate={glassAnimation} alt="" />
+         
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 

@@ -1,8 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ContactForm.css';
+import axios from 'axios';
 import { FaEnvelope, FaPhone, FaMapMarker } from 'react-icons/fa';
 
 const ContactForm = () => {
+
+  const [isLoading, setIsLoading] = useState(false);
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    const formData = new FormData(e.target);
+    const data = {};
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
+
+    try {
+      e.target.reset();
+      setTimeout(() => {
+        alert("Your form has been successfully submitted. We will try to get back to you as soon as possible.");
+        setIsLoading(false);
+      }, 3000);
+
+      await axios.post('https://rvudyog.onrender.com/api/endpoint', data);
+      // Form submitted successfully
+    } catch (error) {
+      alert("There was a error while submitting the form. Please try again.");
+      console.error('Error while submitting the form:', error);
+    }
+
+  };
+  const [showProductEnquiry, setShowProductEnquiry] = useState(false);
+
   return (
     <div className="contact-form-container">
       <div className="form-container">
@@ -20,7 +51,7 @@ const ContactForm = () => {
         </div>
         <div className="right-container">
           <div className="right-inner-container">
-            <form action="#">
+            <form action="#" onSubmit={handleSubmit}>
               <h2 className="lg-view">Contact</h2>
               <h2 className="sm-view">Let's Chat</h2>
               <p>* Required</p>
@@ -33,7 +64,14 @@ const ContactForm = () => {
               <input type="email" placeholder="Email *" />
               <input type="phone" placeholder="Phone" />
               <textarea rows="4" placeholder="Message"></textarea>
-              <button>Submit</button>
+              <button  disabled={isLoading}>{isLoading ? (
+                <span>
+                  Submit
+                  <span className="loading-spinner"></span>
+                </span>
+              ) : (
+                'Submit'
+              )}</button>
             </form>
           </div>
         </div>
