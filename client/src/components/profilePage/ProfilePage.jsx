@@ -40,8 +40,8 @@ function ProfilePage() {
           {/* Add your about text here */}
         </p>
         <motion.div className="social-icons" initial={{ opacity: 0, scale: 0 }} animate={socialIconsAnimation}>
-          <a className="social-icon-1" href="https://twitter.com/your-twitter-link" target="_blank" rel="noreferrer">
-            <FaTwitter />
+          <a className="social-icon-1" href="https://x.com/Rishabh_27_10" target="_blank" rel="noreferrer">
+            <FaTwitter className="twitter"/>
           </a>
           <a className="social-icon-2" href="https://www.instagram.com/your-instagram-link" target="_blank" rel="noreferrer">
             <FaInstagram />
@@ -49,7 +49,7 @@ function ProfilePage() {
           <a className="social-icon-3" href="https://github.com/RIsHaBHMiShrA2710" target="_blank" rel="noreferrer">
             <FaGithub />
           </a>
-          <a className="social-icon-4" href="https://www.linkedin.com/feed/?trk=404_page" target="_blank" rel="noreferrer">
+          <a className="social-icon-4" href="https://www.linkedin.com/in/rishabhmishradev" target="_blank" rel="noreferrer">
             <FaLinkedin />
           </a>
           <motion.div className='profile-page-download-button' initial={{ y: 40, opacity: 0 }} animate={downloadButtonAnimation}>

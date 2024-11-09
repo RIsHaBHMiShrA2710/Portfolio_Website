@@ -25,10 +25,10 @@ const PlatformCarousel = () => {
       author: 'RishabhMishra2710',
     },
     {
-      name: 'GitHub',
-      link: "https://github.com/RIsHaBHMiShrA2710",
-      image: "https://i.imgur.com/FVP7GqQ.jpg",
-      author: 'RIsHaBHMiShrA2710',
+      name: 'CodeForces',
+      link: "https://codeforces.com/profile/Rishabh-Mishra20",
+      image: "https://imgur.com/yjgAXan.jpg",
+      author: 'Rishabh-Mishra20',
     },
     // Add more platform objects here
   ];

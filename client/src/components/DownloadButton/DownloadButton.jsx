@@ -54,7 +54,7 @@ const DownloadButton = () => {
               [8, 19],
               [21, 6],
             ]);
-            window.location.href = "https://drive.google.com/uc?export=download&id=1f9EHA3RjQg3Fd7srJQNaOmNM2CNuQoRN";
+            window.location.href = "https://drive.google.com/uc?export=download&id=1kGUWCmgClK88ac80s3O0mYHs32m0mjDA";
           }, duration / 2);
         }
       });

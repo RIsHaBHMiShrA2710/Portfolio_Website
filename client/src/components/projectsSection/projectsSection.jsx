@@ -13,15 +13,15 @@ const projects = [
     title: "Super Welded Mesh",
     description: "The site for a welded mesh manufacturing company.",
     image: "https://i.imgur.com/33X656O.png",
-    link: "https://suparweldedmesh.netlify.com/",
+    link: "https://suparweldedmesh.netlify.app/",
     github: "https://github.com/dK2856/superweld_V1",
   },
   {
     title: "Samvidhan AI",
     description: "Clear all your doubts about law and constitution.",
     image: "https://i.imgur.com/2kZOL4P.png",
-    link: "https://samvidhanai.netlify.app/",
-    github: "https://github.com/suryapratap-01/iemhacks_Hacker-Noobs",
+    link: "https://leagalai.netlify.app/",
+    github: "https://github.com/RIsHaBHMiShrA2710/LegalAi",
   },
 
 ];

@@ -43,9 +43,9 @@ const ContactForm = () => {
             <p>Whether you have a question, want to start a project, or simply want to connect, I'm here for you.</p>
             <p>Feel free to contact me for work, job opportunities, or just a friendly discussion on topics like cricket, history, or politics.</p>
             <div className="contact-info">
-              <p><FaEnvelope style={{ fontSize: '1.5rem' }} /> Email: your-email@example.com</p>
-              <p><FaPhone style={{ fontSize: '1.5rem' }} /> Phone: (123) 456-7890</p>
-              <p><FaMapMarker style={{ fontSize: '1.5rem' }} /> Address: 123 Main St, Your City</p>
+            <p><FaEnvelope style={{ fontSize: '1.5rem' }} /> Email: 2710rismi@gmail.com</p>
+              <p><FaPhone style={{ fontSize: '1.5rem' }} /> Phone: +91 7439908878</p>
+              <p><FaMapMarker style={{ fontSize: '1.5rem' }} /> Address: 7 M.M. Feeder Road, Kolkata-700057</p>
             </div>
           </div>
         </div>
