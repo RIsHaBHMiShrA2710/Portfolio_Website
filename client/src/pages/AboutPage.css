@@ -1,0 +1,212 @@
+.about-page {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: var(--space-lg);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    max-width: 1000px;
+    width: 100%;
+    align-items: start;
+    padding-bottom: var(--space-2xl);
+}
+
+/* Glass Cards */
+.about-bio,
+.experience-section,
+.skills-section,
+.education-section {
+    padding: var(--space-lg);
+}
+
+/* Bio spans full width */
+.about-bio {
+    grid-column: 1 / -1;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 1.5rem;
+    color: var(--accent-primary);
+    margin-bottom: var(--space-md);
+}
+
+.subsection-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+}
+
+.title-icon {
+    color: var(--accent-secondary);
+}
+
+/* Bio Text */
+.bio-text {
+    margin-bottom: var(--space-sm);
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.bio-text .highlight {
+    color: var(--accent-primary);
+    font-weight: 600;
+}
+
+/* Experience */
+.experience-item {
+    padding: var(--space-md);
+    background: var(--canvas-elevated);
+    border-radius: 12px;
+    border-left: 3px solid var(--accent-primary);
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-xs);
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.exp-company {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.exp-duration {
+    font-size: 0.75rem;
+    color: var(--accent-secondary);
+    font-weight: 500;
+}
+
+.exp-role {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: var(--space-sm);
+}
+
+.exp-details {
+    list-style: disc;
+    padding-left: var(--space-lg);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.exp-details li {
+    margin-bottom: var(--space-xs);
+}
+
+/* Skills */
+.skills-group {
+    margin-bottom: var(--space-md);
+}
+
+.skills-group:last-child {
+    margin-bottom: 0;
+}
+
+.skill-category {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--space-xs);
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.skill-tag {
+    padding: 4px 10px;
+    background: var(--canvas-elevated);
+    border: 1px solid var(--glass-border);
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: all 0.2s;
+}
+
+.skill-tag:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+/* Education */
+.edu-item {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.edu-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.edu-year {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent-secondary);
+}
+
+.edu-degree {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.edu-institution {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.edu-score {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-bio {
+        grid-column: 1;
+    }
+
+    .about-page {
+        padding-bottom: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .about-bio,
+    .experience-section,
+    .skills-section,
+    .education-section {
+        padding: var(--space-md);
+    }
+}

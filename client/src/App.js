@@ -1,34 +1,41 @@
 import React from 'react';
-import NavbarComponent from './components/navbar/navbar';
-import ProfilePage from './components/profilePage/ProfilePage';
-import EducationSection from './components/educationSection/educationSection';
-import ProjectsSection from './components/projectsSection/projectsSection';
-import SkillsSection from './components/educationSection/skillsSection';
-import ContactForm from './components/contactSection/ContactForm';
-import Footer from './components/footer/Footer';
-import PlatformCarousel from './components/contactSection/PlatformCarousel';
-function App() {
-   
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ProjectsPage from './pages/ProjectsPage';
+import AchievementsPage from './pages/AchievementsPage';
+import ContactPage from './pages/ContactPage';
+import SideNav from './components/navigation/SideNav';
+import MorphingBackground from './components/canvas/MorphingBackground';
+import MagneticCursor from './components/canvas/MagneticCursor';
+import ThemeToggle from './components/canvas/ThemeToggle';
+
+function AnimatedRoutes() {
+    const location = useLocation();
+
     return (
-        <div>
-            <NavbarComponent />
-            <section id="home">
-                <ProfilePage />
-            </section>
-            <section id="about">
-                <SkillsSection />
-                <EducationSection />
-            </section>
-            <section id="projects">
-                <ProjectsSection />
-                <PlatformCarousel />
-            </section>
-            
-            <section id="contact">
-                <ContactForm />
-            </section>
-            <Footer />
-        </div>
+        <AnimatePresence mode="wait">
+            <Routes location={location} key={location.pathname}>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/projects" element={<ProjectsPage />} />
+                <Route path="/achievements" element={<AchievementsPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+        </AnimatePresence>
+    );
+}
+
+function App() {
+    return (
+        <Router>
+            <MagneticCursor />
+            <MorphingBackground />
+            <SideNav />
+            <AnimatedRoutes />
+            <ThemeToggle />
+        </Router>
     );
 }
 

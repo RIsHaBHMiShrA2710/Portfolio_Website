@@ -1,0 +1,131 @@
+.card-deck-nav {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.deck-container {
+    position: relative;
+    width: 80px;
+    height: 100px;
+}
+
+.nav-card {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 80px;
+    height: 100px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: none;
+    overflow: hidden;
+    transform-origin: bottom right;
+}
+
+.nav-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--card-color) 0%, transparent 60%);
+    opacity: 0.15;
+    transition: opacity 0.3s var(--ease-out-expo);
+}
+
+.nav-card:hover::before {
+    opacity: 0.3;
+}
+
+.nav-card.active {
+    border-color: var(--card-color);
+}
+
+.nav-card.active::before {
+    opacity: 0.25;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 1;
+}
+
+.card-icon {
+    font-size: 24px;
+    color: var(--card-color);
+    transition: transform 0.3s var(--ease-out-expo);
+}
+
+.nav-card:hover .card-icon {
+    transform: scale(1.2);
+}
+
+.card-label {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, var(--card-color) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s var(--ease-out-expo);
+    pointer-events: none;
+}
+
+.nav-card.active .card-glow {
+    opacity: 0.1;
+}
+
+.deck-hint {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-right: 10px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .card-deck-nav {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .nav-card {
+        width: 60px;
+        height: 80px;
+    }
+
+    .deck-container {
+        width: 60px;
+        height: 80px;
+    }
+
+    .card-icon {
+        font-size: 20px;
+    }
+
+    .card-label {
+        font-size: 9px;
+    }
+}
