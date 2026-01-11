@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* Living Canvas Color Palette */
-  --canvas-bg: #0a0a0f;
-  --canvas-surface: #12121a;
-  --canvas-elevated: #1a1a25;
+  /* Living Canvas Color Palette - Teal/Coral Theme */
+  --canvas-bg: #0a0f0f;
+  --canvas-surface: #121a1a;
+  --canvas-elevated: #1a2525;
 
-  /* Accent Colors - Deep & Vibrant */
-  --accent-primary: #6c5ce7;
-  --accent-secondary: #00cec9;
-  --accent-warm: #fd79a8;
-  --accent-glow: rgba(108, 92, 231, 0.4);
+  /* Accent Colors - Coral Primary (for visibility), Teal Secondary */
+  --accent-primary: #00b894;
+  --accent-secondary: #e17055;
+  --accent-warm: #fdcb6e;
+  --accent-glow: rgba(0, 184, 148, 0.4);
 
   /* Page-specific Blob Colors */
-  --blob-home: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 50%, #74b9ff 100%);
+  --blob-home: linear-gradient(135deg, #00b894 0%, #55efc4 50%, #00cec9 100%);
   --blob-about: linear-gradient(135deg, #00cec9 0%, #81ecec 50%, #55efc4 100%);
   --blob-projects: linear-gradient(135deg, #fd79a8 0%, #fab1a0 50%, #ffeaa7 100%);
   --blob-contact: linear-gradient(135deg, #e17055 0%, #fdcb6e 50%, #f8e71c 100%);
@@ -51,12 +51,12 @@
 
 /* Light theme */
 [data-theme="light"] {
-  --canvas-bg: #f8f9ff;
+  --canvas-bg: #f8ffff;
   --canvas-surface: #ffffff;
-  --canvas-elevated: #f0f1f8;
-  --text-primary: #0a0a0f;
-  --text-secondary: rgba(10, 10, 15, 0.8);
-  --text-muted: rgba(10, 10, 15, 0.55);
+  --canvas-elevated: #f0f8f8;
+  --text-primary: #0a0f0f;
+  --text-secondary: rgba(10, 15, 15, 0.8);
+  --text-muted: rgba(10, 15, 15, 0.55);
   --glass-bg: rgba(0, 0, 0, 0.04);
   --glass-border: rgba(0, 0, 0, 0.08);
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -240,9 +240,9 @@ a {
   box-shadow: var(--glass-shadow);
 }
 
-/* Gradient Text */
+/* Gradient Text - Coral to Golden for contrast */
 .gradient-text {
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  background: linear-gradient(135deg, var(--accent-secondary), var(--accent-warm));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -255,7 +255,7 @@ a {
 
 /* Selection */
 ::selection {
-  background: var(--accent-primary);
+  background: var(--accent-secondary);
   color: white;
 }
 
@@ -274,12 +274,12 @@ a {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-primary);
+  background: var(--accent-secondary);
 }
 
 /* Focus */
 :focus-visible {
-  outline: 2px solid var(--accent-primary);
+  outline: 2px solid var(--accent-secondary);
   outline-offset: 4px;
 }
 

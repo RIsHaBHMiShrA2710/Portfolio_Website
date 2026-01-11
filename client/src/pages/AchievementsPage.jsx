@@ -31,8 +31,8 @@ const codingPlatforms = [
     {
         name: 'Codeforces',
         icon: SiCodeforces,
-        color: '#1f8acb',
-        bgGradient: 'linear-gradient(135deg, #1f8acb 0%, #3498db 100%)',
+        color: '#00b894',
+        bgGradient: 'linear-gradient(135deg, #00b894 0%, #00cec9 100%)',
         stats: [
             { label: 'Rank', value: 'Specialist' },
             { label: 'Rating', value: '1400+' },
@@ -46,7 +46,7 @@ const otherAchievements = [
         icon: FaFileAlt,
         title: 'Research Paper Published',
         description: '"Event Identification and Chronology Model for Ramayana" accepted at IEMTech 2025',
-        color: '#6c5ce7',
+        color: '#00b894',
     },
     {
         icon: FaMedal,
@@ -58,7 +58,7 @@ const otherAchievements = [
         icon: FaChartLine,
         title: 'Academic Excellence',
         description: 'CGPA 9.0/10 in B.Tech CSE (AI) at IEM Kolkata',
-        color: '#fd79a8',
+        color: '#e17055',
     },
 ];
 

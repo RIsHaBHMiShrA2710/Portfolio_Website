@@ -8,21 +8,21 @@ const projects = [
         id: 1,
         title: 'Epaisa - Finance Blog',
         description: 'A responsive finance blog platform with full CRUD for blog posts, featuring upvote/downvote and threaded comments. Integrated React Query for client-side caching.',
-        image: 'https://i.imgur.com/aZh5QtJ.png',
+        image: '/epaisaThumbnail.png',
         link: 'https://epaisa.netlify.app/blog/',
         github: 'https://github.com/RIsHaBHMiShrA2710/Epaisa',
         tags: ['ReactJS', 'NodeJS', 'PostgreSQL', 'React Query'],
-        color: '#6c5ce7',
+        color: '#00cec9',
     },
     {
         id: 2,
         title: 'Expense Tracker',
         description: 'A platform to track expenses through emails. Features user registration, login, document search, email extraction, and regex matching.',
-        image: 'https://i.imgur.com/33X656O.png',
+        image: '/expensetracker.png',
         link: 'https://x.com/lifelong_grind/status/1991048173004181865',
         github: 'https://github.com/RIsHaBHMiShrA2710/expense_tracker',
         tags: ['ReactJS', 'Spring Boot', 'PostgreSQL'],
-        color: '#00cec9',
+        color: '#00b894',
     },
     {
         id: 3,
@@ -64,54 +64,56 @@ function ProjectsPage() {
             exit="exit"
             transition={{ duration: 0.6, ease: [0.19, 1, 0.22, 1] }}
         >
-            <motion.h2
-                className="page-title"
-                initial={{ opacity: 0, y: -30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-            >
-                Projects
-            </motion.h2>
+            <div className="projects-wrapper">
+                <motion.h2
+                    className="page-title"
+                    initial={{ opacity: 0, y: -30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                >
+                    Projects
+                </motion.h2>
 
-            <div className="projects-grid">
-                {projects.map((project, index) => (
-                    <motion.div
-                        key={project.id}
-                        className="project-card magnetic"
-                        style={{ '--project-color': project.color }}
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{
-                            delay: 0.3 + index * 0.1,
-                            type: 'spring',
-                            stiffness: 100
-                        }}
-                        whileHover={{
-                            y: -8,
-                            scale: 1.02,
-                        }}
-                        onClick={() => setSelectedProject(project)}
-                    >
-                        <div className="card-image-container">
-                            <img
-                                src={project.image}
-                                alt={project.title}
-                                className="card-image"
-                            />
-                            <div className="card-overlay">
-                                <span className="view-project">View Details</span>
+                <div className="projects-grid">
+                    {projects.map((project, index) => (
+                        <motion.div
+                            key={project.id}
+                            className="project-card magnetic"
+                            style={{ '--project-color': project.color }}
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{
+                                delay: 0.3 + index * 0.1,
+                                type: 'spring',
+                                stiffness: 100
+                            }}
+                            whileHover={{
+                                y: -8,
+                                scale: 1.02,
+                            }}
+                            onClick={() => setSelectedProject(project)}
+                        >
+                            <div className="card-image-container">
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="card-image"
+                                />
+                                <div className="card-overlay">
+                                    <span className="view-project">View Details</span>
+                                </div>
                             </div>
-                        </div>
-                        <div className="card-info">
-                            <h3 className="card-title">{project.title}</h3>
-                            <div className="card-tags">
-                                {project.tags.slice(0, 3).map(tag => (
-                                    <span key={tag} className="tag">{tag}</span>
-                                ))}
+                            <div className="card-info">
+                                <h3 className="card-title">{project.title}</h3>
+                                <div className="card-tags">
+                                    {project.tags.slice(0, 3).map(tag => (
+                                        <span key={tag} className="tag">{tag}</span>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    </motion.div>
-                ))}
+                        </motion.div>
+                    ))}
+                </div>
             </div>
 
             {/* Project Modal */}

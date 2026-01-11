@@ -1,14 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaTwitter, FaGithub, FaLinkedin, FaDownload, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaDownload, FaEnvelope } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 import './HomePage.css';
 
 const socialLinks = [
-    { icon: FaGithub, href: 'https://github.com/RIsHaBHMiShrA2710', label: 'GitHub', delay: 0 },
-    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/rishabhmishradev', label: 'LinkedIn', delay: 0.1 },
-    { icon: SiLeetcode, href: 'https://leetcode.com/RishabhMishra2710', label: 'LeetCode', delay: 0.2 },
-    { icon: FaTwitter, href: 'https://x.com/Rishabh_27_10', label: 'Twitter', delay: 0.3 },
+    { icon: FaGithub, href: 'https://github.com/RIsHaBHMiShrA2710', label: 'GitHub' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/rishabhmishradev', label: 'LinkedIn' },
+    { icon: SiLeetcode, href: 'https://leetcode.com/RishabhMishra2710', label: 'LeetCode' },
 ];
 
 const pageVariants = {
@@ -95,7 +94,7 @@ function HomePage() {
                         Ex-Intern @ <span className="highlight">Accenture</span>
                     </motion.p>
 
-                    {/* Social Links - Inline */}
+                    {/* Social Links */}
                     <motion.div
                         className="social-row"
                         initial={{ opacity: 0, y: 20 }}
@@ -134,27 +133,6 @@ function HomePage() {
                             <FaDownload /> Resume
                         </a>
                     </motion.div>
-                </motion.div>
-
-                {/* Quick Stats */}
-                <motion.div
-                    className="quick-stats"
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: 0.5 }}
-                >
-                    <div className="stat-card glass-card">
-                        <span className="stat-value">750+</span>
-                        <span className="stat-label">LeetCode Problems</span>
-                    </div>
-                    <div className="stat-card glass-card">
-                        <span className="stat-value">1870+</span>
-                        <span className="stat-label">Knight Rating</span>
-                    </div>
-                    <div className="stat-card glass-card">
-                        <span className="stat-value">9.0</span>
-                        <span className="stat-label">CGPA</span>
-                    </div>
                 </motion.div>
             </div>
         </motion.div>
