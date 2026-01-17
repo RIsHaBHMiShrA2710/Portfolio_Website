@@ -1,43 +1,26 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import './MorphingBackground.css';
 
 function MorphingBackground() {
-    const location = useLocation();
-
-    const getBlobColor = () => {
-        switch (location.pathname) {
-            case '/about':
-                return 'blob-about';
-            case '/projects':
-                return 'blob-projects';
-            case '/achievements':
-                return 'blob-projects'; // Use warm colors for achievements
-            case '/contact':
-                return 'blob-contact';
-            default:
-                return 'blob-home';
-        }
-    };
-
     return (
-        <div className="morphing-background">
-            <motion.div
-                className={`blob blob-1 ${getBlobColor()}`}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1.5, ease: "easeOut" }}
-                key={location.pathname + '-1'}
-            />
-            <motion.div
-                className={`blob blob-2 ${getBlobColor()}`}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 0.5, scale: 1 }}
-                transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-                key={location.pathname + '-2'}
-            />
-            <div className="noise-overlay" />
+        <div className="comic-background">
+            {/* Halftone dot pattern */}
+            <div className="halftone-pattern" />
+
+            {/* Speed lines */}
+            <div className="diagonal-lines" />
+
+            {/* Corner decorations */}
+            <div className="corner-burst top-left" />
+            <div className="corner-burst bottom-right" />
+
+            {/* Random floating shapes */}
+            <div className="floating-shapes">
+                <div className="shape star" style={{ top: '15%', left: '10%' }} />
+                <div className="shape circle" style={{ top: '70%', left: '85%' }} />
+                <div className="shape star" style={{ top: '80%', left: '20%' }} />
+                <div className="shape circle" style={{ top: '25%', right: '15%' }} />
+            </div>
         </div>
     );
 }

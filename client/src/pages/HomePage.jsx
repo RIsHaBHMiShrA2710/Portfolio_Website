@@ -129,7 +129,7 @@ function HomePage() {
                         <a href="mailto:2710rismi@gmail.com" className="cta-btn primary magnetic">
                             <FaEnvelope /> Get in Touch
                         </a>
-                        <a href="/resume.pdf" download className="cta-btn secondary magnetic">
+                        <a href="https://drive.google.com/file/d/1kwQxzxagbKanlKr0jhmXN7jskDuTNjpB/view?usp=sharing" download className="cta-btn secondary magnetic">
                             <FaDownload /> Resume
                         </a>
                     </motion.div>
