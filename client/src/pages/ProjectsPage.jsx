@@ -6,6 +6,16 @@ import './ProjectsPage.css';
 const projects = [
     {
         id: 1,
+        title:'AI Portfolio Assistant',
+        description: 'An AI-powered portfolio agent that provides real time information and insights and recommendations based on 13+ tools that help it in getting real time finance information.',
+        image: '/image.png',
+        link: 'https://x.com/lifelong_grind/status/2018633993013612699',
+        github: 'https://github.com/RIsHaBHMiShrA2710/AI-Portfolio-Assistant',
+        tags: ['AI', 'LangGraph', 'Agents', 'Finance APIs'],
+        color: '#0984e3',
+    },
+    {
+        id: 2,
         title: 'Epaisa - Finance Blog',
         description: 'A responsive finance blog platform with full CRUD for blog posts, featuring upvote/downvote and threaded comments. Integrated React Query for client-side caching.',
         image: '/epaisaThumbnail.png',
@@ -15,7 +25,7 @@ const projects = [
         color: '#00cec9',
     },
     {
-        id: 2,
+        id: 3,
         title: 'Expense Tracker',
         description: 'A platform to track expenses through emails. Features user registration, login, document search, email extraction, and regex matching.',
         image: '/expensetracker.png',
@@ -25,7 +35,7 @@ const projects = [
         color: '#00b894',
     },
     {
-        id: 3,
+        id: 4,
         title: 'Samvidhan AI',
         description: 'An AI-powered platform to clear doubts about Indian law and constitution using natural language queries.',
         image: 'https://i.imgur.com/2kZOL4P.png',
@@ -35,7 +45,7 @@ const projects = [
         color: '#fd79a8',
     },
     {
-        id: 4,
+        id: 5,
         title: 'Story Social',
         description: 'A platform to upload short stories and see them in a ranking system with upvotes and downvotes.',
         image: 'https://i.imgur.com/aZh5QtJ.png',
